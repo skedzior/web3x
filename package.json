@@ -19,9 +19,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Metalink-App/exw3/issues"
+    "url": "https://github.com/Metalink-App/ex_w3/issues"
   },
-  "homepage": "https://github.com/Metalink-App/exw3#readme",
+  "homepage": "https://github.com/Metalink-App/ex_w3#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2",
     "save-dev": "^0.0.1-security"
