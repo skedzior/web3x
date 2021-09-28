@@ -63,7 +63,7 @@ Provide an absolute path to the ipc socket provided by whatever Ethereum client 
 
 * NOTE : Use of Ipc is recommended, as it is more secure and significantly faster.
 
-Currently, Ex_W3 supports a handful of json rpc commands. Primarily the ones that get used the most. If Ex_W3 doesn't provide a specific command, you can always use the [Ethereumex](https://github.com/exthereum/ethereumex) commands.
+Currently, Web3x supports a handful of json rpc commands. Primarily the ones that get used the most. If Web3x doesn't provide a specific command, you can always use the [Ethereumex](https://github.com/exthereum/ethereumex) commands.
 
 Check out the [documentation](https://hexdocs.pm/web3x/Web3x.html) for more details of the API.
 
