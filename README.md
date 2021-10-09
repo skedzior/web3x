@@ -123,6 +123,19 @@ iex(2)> Web3x.Contract.load_abi_map(cryptopunk_abi)
 }
 ```
 
+Verify a signed message using `verify_message?/4` (supports login with Metamask by verifying a signed message with nonce in it...)
+```elixir
+iex(1)> nonce = Web3x.Wallet.get_nonce() # this would normally be sent to the frontend client to an elixir backend to be part of the message that is signed by a wallet keypair in the login flow.
+"EwmvD7zFmRNb8hoCGc53kA=="
+iex(2)> message = "Some Message to sign for login - nonce: " <> nonce
+"Some Message to sign for login - nonce: EwmvD7zFmRNb8hoCGc53kA=="
+iex(3)> public_address = "0xd6373ff972C311aa4B79dEb1ec2738f9d138acE9"
+"0xd6373ff972C311aa4B79dEb1ec2738f9d138acE9"
+iex(4)> signature = "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763add1c" # Example signature generated from signing the message with the above public address and Metamask
+"0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763add1c"
+iex(5)> Web3x.Wallet.verify_message?(public_address, message, signature, nonce)
+true
+```
 ## Address Type
 
 If you are familiar with web3.js you may find the way Web3x handles addresses unintuitive. Web3x's abi encoder interprets the address type as an uint160. If you are using an address as an option to a transaction like `:from` or `:to` this will work as expected. However, if one of your smart contracts is expecting an address type for an input parameter then you will need to do this:

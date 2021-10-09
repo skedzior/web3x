@@ -21,7 +21,8 @@ defmodule Web3x.Rpc do
 
   @doc "Returns the current block number"
   @spec block_number() :: {:ok, non_neg_integer} | {:error, Web3x.Utils.invalid_hex_string()}
-  @spec block_number([opts]) :: {:ok, non_neg_integer} | {:error, Web3x.Utils.invalid_hex_string()}
+  @spec block_number([opts]) ::
+          {:ok, non_neg_integer} | {:error, Web3x.Utils.invalid_hex_string()}
   def block_number(opts \\ []) do
     case call_client(:eth_block_number, [opts]) do
       {:ok, hex_block_number} -> Web3x.Utils.hex_to_integer(hex_block_number)
