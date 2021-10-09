@@ -3,7 +3,7 @@ defmodule Web3x.Wallet do
   @base_recovery_id 27
   @base_recovery_id_eip_155 35
 
-  # @doc get Nonce returns a base64 encoded 16 byte (default) binary to be used as a nonce in a message used in the log-in with ethereum wallet flow.
+  # @doc get Nonce returns a base64 encoded 16 byte (default) binary to be used as a nonce in a message used in the login with ethereum wallet flow.
   def get_nonce(bytes_num \\ 16) do
     rand_bytes = :crypto.strong_rand_bytes(bytes_num)
     Base.encode64(rand_bytes)
