@@ -1,6 +1,6 @@
 {
   "name": "web3x",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Npm Project for testing Web3x",
   "main": "index.js",
   "directories": {
