@@ -123,7 +123,7 @@ iex(2)> Web3x.Contract.load_abi_map(cryptopunk_abi)
 }
 ```
 
-Login with signed message using `verify_message?/4` (supports login with Metamask etc...)
+Login with signed message using `verify_message?/4` (supports login with Metamask by verifying a signed message with nonce in it...)
 ```elixir
 iex(1)> nonce = Web3x.Wallet.get_nonce() # this would normally be sent to the frontend client to be part of the message that is signed in the login flow.
 "EwmvD7zFmRNb8hoCGc53kA=="
