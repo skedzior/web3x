@@ -102,7 +102,11 @@ defmodule Web3x.Wallet do
   @doc "Verifies if a message was signed by a wallet keypair given a the public address, message, signature, and nonce in the message"
   def verify_message?(public_address, message, signature, nonce) do
     if is_nonce_in_message?(message, nonce) do
-      verify_message?(public_address, message, signature)
+      try do
+        verify_message?(public_address, message, signature)
+      rescue
+        _e in RuntimeError -> false
+      end
     else
       false
     end
