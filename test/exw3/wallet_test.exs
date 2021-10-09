@@ -4,7 +4,7 @@ defmodule Web3x.WalletTest do
   describe ".verify_message?/4" do
     alias Web3x.Wallet
 
-    @message "Some message to sign for login - nonce: EwmvD7zFmRNb8hoCGc53kA=="
+    @message "Some Message to sign for login - nonce: EwmvD7zFmRNb8hoCGc53kA=="
     @invalid_message "Some invalid message to sign for login - nonce: EwmvD7zFmRNb8hoCGc53kA=="
     @nonce "EwmvD7zFmRNb8hoCGc53kA=="
     @invalid_nonce "EhmvD7zFmRNb8hoCGc53kC=="
