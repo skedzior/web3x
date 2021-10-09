@@ -31,15 +31,30 @@ defmodule Web3x.WalletTest do
     end
 
     test "returns false when address and signature are invalid" do
-      assert not Wallet.verify_message?(@invalid_public_address, @message, @invalid_signature, @nonce)
+      assert not Wallet.verify_message?(
+               @invalid_public_address,
+               @message,
+               @invalid_signature,
+               @nonce
+             )
     end
 
     test "returns false when address and nonce are invalid" do
-      assert not Wallet.verify_message?(@invalid_public_address, @message, @signature, @invalid_nonce)
+      assert not Wallet.verify_message?(
+               @invalid_public_address,
+               @message,
+               @signature,
+               @invalid_nonce
+             )
     end
 
     test "returns false when address, signature, and nonce are invalid" do
-      assert not Wallet.verify_message?(@invalid_public_address, @message, @invalid_signature, @invalid_nonce)
+      assert not Wallet.verify_message?(
+               @invalid_public_address,
+               @message,
+               @invalid_signature,
+               @invalid_nonce
+             )
     end
 
     test "returns false when message is invalid" do
@@ -47,7 +62,7 @@ defmodule Web3x.WalletTest do
     end
 
     test "returns false when signature is bad" do
-      assert not Wallet.verify_message?(@public_address,@message, @bad_signature, @nonce)
+      assert not Wallet.verify_message?(@public_address, @message, @bad_signature, @nonce)
     end
   end
 end

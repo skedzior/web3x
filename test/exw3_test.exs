@@ -397,7 +397,9 @@ defmodule Web3xTest do
              Web3x.Contract.send(:SimpleStorage, :set, [1], %{gas: 50_000})
 
     assert {:error, :missing_gas} ==
-             Web3x.Contract.send(:SimpleStorage, :set, [1], %{from: Enum.at(context[:accounts], 0)})
+             Web3x.Contract.send(:SimpleStorage, :set, [1], %{
+               from: Enum.at(context[:accounts], 0)
+             })
   end
 
   test ".get_logs/1", context do

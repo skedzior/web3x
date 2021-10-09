@@ -3,7 +3,7 @@ defmodule Web3x.Wallet do
   @base_recovery_id 27
   @base_recovery_id_eip_155 35
 
-  # @doc get Nonce returns a base64 encoded 16 byte (default) binary to be used as a nonce in a message used in the login with ethereum wallet flow.
+  # @doc Returns a base64 encoded 16 byte (default) binary to be used as a nonce in a message used in the login with ethereum wallet flow.
   def get_nonce(bytes_num \\ 16) do
     rand_bytes = :crypto.strong_rand_bytes(bytes_num)
     Base.encode64(rand_bytes)
@@ -32,11 +32,7 @@ defmodule Web3x.Wallet do
 
     {:ok, v, _} = decode_signature(v)
 
-    {
-      r,
-      s,
-      v
-    }
+    {r, s, v}
   end
 
   defp decode_signature(signature_v) do
@@ -45,7 +41,6 @@ defmodule Web3x.Wallet do
     #  2. It is 0,1 + base recovery_id, in which case we need to subtract that and add EIP-155
     #  3. It is already EIP-155 compliant
 
-    # require IEx; IEx.pry
     cond do
       is_simple_signature?(signature_v) ->
         {:ok, signature_v, nil}

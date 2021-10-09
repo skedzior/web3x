@@ -131,7 +131,7 @@ iex(2)> message = "Some Message to sign for login - nonce: " <> nonce
 "Some Message to sign for login - nonce: EwmvD7zFmRNb8hoCGc53kA=="
 iex(3)> public_address = "0xd6373ff972C311aa4B79dEb1ec2738f9d138acE9"
 "0xd6373ff972C311aa4B79dEb1ec2738f9d138acE9"
-iex(4)> signature = "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763add1c" # if this signature was signed by the wallet of the publid address above in metamask it would produce this
+iex(4)> signature = "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763add1c" # Example signature generated from signing the message with the above public address and Metamask
 "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763add1c"
 iex(5)> Web3x.Wallet.verify_message?(public_address, message, signature, nonce)
 true
