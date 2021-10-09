@@ -12,7 +12,7 @@ defmodule Web3x.WalletTest do
     @invalid_public_address "0xd6373ff972C311aa4B79dEb1ec2738f9d138acc8"
     @signature "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763add1c"
     @invalid_signature "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763a1d14"
-    @bad_signature "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763a1d1"
+    @bad_signature "0xfbd0c4267b5dad03a8a701678e628b2d2eb860c95341629dd20d570f1f999b6939a09ea5d98c5aa720edcf5ed55b55dccd6bb48d6929247d9adf643251763a1dz"
 
     test "returns true when public address is recovered" do
       assert Wallet.verify_message?(@public_address, @message, @signature, @nonce)

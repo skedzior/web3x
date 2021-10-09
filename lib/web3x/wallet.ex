@@ -105,7 +105,7 @@ defmodule Web3x.Wallet do
       try do
         verify_message?(public_address, message, signature)
       rescue
-        _e in RuntimeError -> false
+        _e -> false
       end
     else
       false
