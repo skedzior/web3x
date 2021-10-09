@@ -94,7 +94,6 @@ defmodule EXW3.ContractTest do
 
     Web3x.Contract.at(:MyCollectibleErc721, address)
     response = Web3x.Contract.call(:MyCollectibleErc721, :symbol, [])
-    IO.inspect(response)
     assert {:ok, _} = response
   end
 end
