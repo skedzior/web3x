@@ -12,7 +12,7 @@
 ```elixir
 def deps do
   [
-    {:web3x, "~> 0.6.3"}
+    {:web3x, "~> 0.6.4"}
   ]
 end
 ```

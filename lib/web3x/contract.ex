@@ -32,7 +32,7 @@ defmodule Web3x.Contract do
   end
 
   @doc "Returns the current Contract GenServer's address"
-  @spec address(atom()) :: {:ok, binary()}
+  @spec address(atom()) :: binary() | nil
   def address(name) do
     GenServer.call(ContractManager, {:address, name})
   end
