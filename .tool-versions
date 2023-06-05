@@ -1,0 +1,4 @@
+erlang 25.1.2
+elixir 1.14.2-otp-25
+rust 1.56.1
+postgres 13.5
