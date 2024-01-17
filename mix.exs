@@ -26,7 +26,7 @@ defmodule Web3x.MixProject do
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
-      {:ssl_verify_fun, “~> 1.1.7”, manager: :rebar3, override: true},
+      {:ssl_verify_fun, "~> 1.1.7", manager: :rebar3, override: true},
       {:ethereumex, "~> 0.7.0"},
       {:ex_keccak, "~> 0.7.1"},
       {:ex_secp256k1, "~> 0.7.0"},
